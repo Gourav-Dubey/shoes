@@ -1,0 +1,15 @@
+shoe-store/
+├── public/
+│   └── (static files/images etc.)
+├── src/
+│   ├── assets/              # Images, icons, etc.
+│   ├── components/          # Reusable components (Navbar, Button, etc.)
+│   ├── pages/               # Page-level components (Home.jsx, About.jsx)
+│   ├── App.jsx              # Main app component
+│   ├── main.jsx             # Vite entry point
+│   ├── index.css            # TailwindCSS + global styles
+│   └── utils/               # Any utility/helper functions
+├── tailwind.config.js
+├── postcss.config.js
+├── index.html
+└── package.json
