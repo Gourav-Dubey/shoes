@@ -278,21 +278,21 @@ const products = [
     price: "₹4,999",
     discount: "30% Off",
     category: "Men",
-    image: "https://via.placeholder.com/300x200",
+    image: "/shoe29.jpg",
   },
   {
     title: "Running Shoes",
     price: "₹3,499",
     discount: "20% Off",
     category: "Men",
-    image: "https://via.placeholder.com/300x200",
+    image: "/shoe30.jpg",
   },
   {
     title: "High Heels",
     price: "₹2,999",
     discount: "40% Off",
     category: "Women",
-    image: "https://via.placeholder.com/300x200",
+    image: "/shoe17.jpg",
   },
 ];
 

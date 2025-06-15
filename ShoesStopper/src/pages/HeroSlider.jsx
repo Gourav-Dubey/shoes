@@ -94,31 +94,31 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
   {
-    image: "/src/assets/shoe1.jpg", // Update this path based on your actual image location
+    image: "/shoe1.jpg", // Update this path based on your actual image location
     title: "AirKnit Stretch From Heel to Toe",
     subtitle: "Introducing Knit Gliders",
     cta: "Try a Pair",
   },
   {
-    image: "/src/assets/shoe2.jpg",
+    image: "/shoe2.jpg",
     title: "Comfort Meets Style",
     subtitle: "Run Smart, Look Sharp",
     cta: "Shop Now",
   },
   {
-    image: "/src/assets/shoe3.jpg",
+    image: "/shoe3.jpg",
     title: "The Future of Footwear",
     subtitle: "Engineered for Performance",
     cta: "Explore Collection",
   },
   {
-    image: "/src/assets/shoe4.jpg",
+    image: "/shoe4.jpg",
     title: "The Future of Footwear",
     subtitle: "Engineered for Performance",
     cta: "Explore Collection",
   },
   {
-    image: "/src/assets/shoes.jpg",
+    image: "/shoes.jpg",
     title: "The Future of Footwear",
     subtitle: "Engineered for Performance",
     cta: "Explore Collection",
@@ -137,7 +137,7 @@ const HeroSlider = () => {
   }, []);
 
   useEffect(() => {
-    const timer = setInterval(handleNext, 5000);
+    const timer = setInterval(handleNext, 4000);
     return () => clearInterval(timer);
   }, [handleNext]);
 

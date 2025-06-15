@@ -8,11 +8,13 @@ import Navbar from './layouts/Navbar'
 
 
 
+
 const App = () => {
   return (
     <>
     <Navbar/>
     <Routes>
+      <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
       <Route path="/men" element={<MenShoesPage />} />
       <Route path="/womens" element={<WomenShoesPage />} />
