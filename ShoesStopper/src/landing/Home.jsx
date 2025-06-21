@@ -1,4 +1,3 @@
-import React from 'react'
 import FeaturedProducts from '../components/FeaturedProducts'
 import CategorySection from '../components/CategorySection'
 import NewsletterSection from '../components/NewsletterSection'

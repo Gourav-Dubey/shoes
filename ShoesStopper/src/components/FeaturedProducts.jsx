@@ -1,12 +1,11 @@
-
-
-import React from "react";
+import { useState, useEffect } from 'react';
 import shoe1 from "/shoe1.jpg";
 import shoe2 from "/shoe2.jpg";
 import shoe3 from "/shoe3.jpg";
 import shoe4 from "/shoe4.jpg";
 
 function FeaturedProducts() {
+  const [isLoading, setIsLoading] = useState(true);
   const products = [
     {
       title: "Air Cloud 9",
@@ -38,6 +37,48 @@ function FeaturedProducts() {
     }
   ];
 
+  useEffect(() => {
+    // Preload images
+    const imagePromises = products.map(product => {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.src = product.image;
+        img.onload = resolve;
+        img.onerror = resolve; // Even if error occurs, we still want to show the component
+      });
+    });
+
+    Promise.all(imagePromises).then(() => {
+      setIsLoading(false);
+    });
+  }, []);
+
+  if (isLoading) {
+    return (
+      <section className="px-8 py-16 bg-black text-white">
+        <h2 className="text-3xl font-bold mb-2">Featured Products</h2>
+        <p className="text-gray-400 mb-8">Discover our most popular styles loved by customers worldwide</p>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {products.map((_, index) => (
+            <div key={index} className="bg-zinc-900 p-4 rounded-xl shadow">
+              <div className="bg-zinc-800 h-48 rounded-lg animate-pulse"></div>
+              <div className="mt-4 h-4 bg-zinc-800 rounded animate-pulse"></div>
+              <div className="mt-2 h-6 bg-zinc-800 rounded animate-pulse w-3/4"></div>
+              <div className="mt-2 h-4 bg-zinc-800 rounded animate-pulse w-1/2"></div>
+              <div className="flex space-x-1 mt-2">
+                <span className="w-4 h-4 rounded-full bg-zinc-800 animate-pulse"></span>
+                <span className="w-4 h-4 rounded-full bg-zinc-800 animate-pulse"></span>
+                <span className="w-4 h-4 rounded-full bg-zinc-800 animate-pulse"></span>
+              </div>
+              <div className="mt-4 w-full h-10 bg-zinc-800 rounded-full animate-pulse"></div>
+            </div>
+          ))}
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="px-8 py-16 bg-black text-white">
       <h2 className="text-3xl font-bold mb-2">Featured Products</h2>
@@ -54,6 +95,8 @@ function FeaturedProducts() {
                 src={product.image}
                 alt={product.title}
                 className="object-contain h-full transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+                decoding="async"
               />
               <button className="absolute top-2 right-2 text-white hover:text-red-500">
                 <i className="far fa-heart"></i>
