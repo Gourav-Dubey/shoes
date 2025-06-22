@@ -292,6 +292,7 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Menu, X, Search, User, ShoppingCart } from "lucide-react";
+import AIButton from "../components/ui/AIButton";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -352,6 +353,9 @@ function Navbar() {
             <NavLink to="/womens" onClick={closeMobileMenu}>Women</NavLink>
             <NavLink to="/collection" onClick={closeMobileMenu}>Collections</NavLink>
             <NavLink to="/sale" onClick={closeMobileMenu}>Sale</NavLink>
+            <AIButton closeMobileMenu={closeMobileMenu} />
+
+
           </nav>
 
           {/* Desktop Icons */}
@@ -406,6 +410,7 @@ function Navbar() {
           <MobileNavLink to="/womens" onClick={closeMobileMenu}>Women</MobileNavLink>
           <MobileNavLink to="/collection" onClick={closeMobileMenu}>Collections</MobileNavLink>
           <MobileNavLink to="/sale" onClick={closeMobileMenu}>Sale</MobileNavLink>
+            <AIButton closeMobileMenu={closeMobileMenu} />
           
           <div className="pt-4">
             <form onSubmit={handleSearch} className="flex mb-4">
