@@ -25,20 +25,14 @@ const slides = [
     cta: "Explore Collection",
     color: "bg-amber-600"
   },
+
   {
     image: "/shoe4.jpg",
-    title: "The Future of Footwear",
-    subtitle: "Engineered for Performance",
-    cta: "Explore Collection",
-    color: "bg-amber-600"
-  },
-  {
-    image: "/shoe5.jpg",
-    title: "The Future of Footwear",
-    subtitle: "Engineered for Performance",
-    cta: "Explore Collection",
-    color: "bg-amber-600"
-  },
+    title: "Step into Luxury",
+    subtitle: "Crafted for Comfort",
+    cta: "Discover More",
+    color: "bg-purple-600"
+  }
   
 ];
 
