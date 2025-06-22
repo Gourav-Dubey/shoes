@@ -184,7 +184,7 @@ function AiStylistPage() {
   );
 
   return (
-    <div className="min-h-screen bg-gray-950 text-white py-12 px-4 relative overflow-hidden">
+    <div className="min-h-screen bg-gray-950 text-white py-18 px-4 relative overflow-hidden">
       {/* Futuristic grid background */}
       <GridBackground />
       
@@ -229,7 +229,7 @@ function AiStylistPage() {
         }}
       />
 
-      <div className="max-w-6xl mx-auto relative z-100 space-y-20">
+      <div className="max-w-6xl mx-auto relative z-10 space-y-20">
         {/* Futuristic header with animated gradient */}
         <motion.div 
           initial={{ opacity: 0, y: -30 }}
