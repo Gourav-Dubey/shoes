@@ -13,6 +13,7 @@
     "@material-tailwind/react": "^2.1.10",
     "@react-hookz/web": "^25.1.1",
     "@tailwindcss/vite": "^4.1.10",
+    "axios": "^1.10.0",
     "browser-router": "^0.2.0",
     "framer-motion": "^12.18.1",
     "lucide-react": "^0.515.0",
