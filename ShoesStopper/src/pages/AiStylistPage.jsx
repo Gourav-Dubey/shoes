@@ -123,7 +123,7 @@ export default function AiStylistPage() {
       if (description) formData.append("description", description);
 
       // const response = await axios.post("http://localhost:5000/api/recommend", formData);
-      const response = await axios.post("https://shoesbackend-3.onrender.com", formData);
+      const response = await axios.post("https://shoesbackend-3.onrender.com/api/recommend", formData);
       setRecommendations(response.data);
     } catch (err) {
       console.error("AI failed:", err);
