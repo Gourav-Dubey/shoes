@@ -95,7 +95,7 @@
 
 // export default AiStylistPage;
 
-// AiStylistPage.jsx
+AiStylistPage.jsx
 import React, { useState } from "react";
 import axios from "axios";
 import { Loader2 } from "lucide-react";
@@ -194,4 +194,4 @@ export default function AiStylistPage() {
   );
 }
 
-// Exported by ChatGPT
+
