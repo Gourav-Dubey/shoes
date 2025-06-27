@@ -296,8 +296,7 @@ function Navbar() {
 
             
 
-            <IconButton icon={<User size={20} />} onClick={handleLoginClick} />
-
+            
             {/* Mobile Menu Toggle */}
             <div className="md:hidden flex items-center">
               <button
@@ -305,29 +304,38 @@ function Navbar() {
                 className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-300 focus:outline-none transition-colors"
                 aria-label="Toggle menu"
               >
-                {isOpen ? <X size={24} /> : <Menu size={24} />}
+                {isOpen ? <X size={10} /> : <Menu size={24} />}
               </button>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Mobile Navigation */}
-      <div
-        className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
-          isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
-        }`}
-      >
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/95">
-          <MobileNavLink to="/home" onClick={closeMobileMenu}>Home</MobileNavLink>
-          <MobileNavLink to="/men" onClick={closeMobileMenu}>Men</MobileNavLink>
-          <MobileNavLink to="/womens" onClick={closeMobileMenu}>Women</MobileNavLink>
-          <MobileNavLink to="/collection" onClick={closeMobileMenu}>Collections</MobileNavLink>
-          <MobileNavLink to="/sale" onClick={closeMobileMenu}>Sale</MobileNavLink>
+     
+<div
+  className={`md:hidden bg-black/95 transition-all duration-300 ease-in-out overflow-hidden ${
+    isOpen ? "max-h-[400px] opacity-100 py-4" : "max-h-0 opacity-0 py-0"
+  }`}
+>
+  <div className="px-4 space-y-3">
+    <MobileNavLink to="/home" onClick={closeMobileMenu}>Home</MobileNavLink>
+    <MobileNavLink to="/men" onClick={closeMobileMenu}>Men</MobileNavLink>
+    <MobileNavLink to="/womens" onClick={closeMobileMenu}>Women</MobileNavLink>
+    <MobileNavLink to="/collection" onClick={closeMobileMenu}>Collections</MobileNavLink>
+    <MobileNavLink to="/sale" onClick={closeMobileMenu}>Sale</MobileNavLink>
 
-          
-        </div>
-      </div>
+    {isOpen && (
+  <div className="flex justify-center pt-2 md:hidden ">
+    <IconButton icon={<User size={20} />} onClick={handleLoginClick} />
+  </div>
+)}
+
+  </div>
+</div>
+
+
+
+
     </header>
   );
 }
