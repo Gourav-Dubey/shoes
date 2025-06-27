@@ -13,7 +13,7 @@ shoe-store/
 ├── postcss.config.js
 ├── index.html
 └── package.json
-
+     all urls are here
 
 
     // const response = await axios.post("http://localhost:5000/api/recommend", formData);
