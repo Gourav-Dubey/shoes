@@ -13,3 +13,9 @@ shoe-store/
 ├── postcss.config.js
 ├── index.html
 └── package.json
+
+
+
+    // const response = await axios.post("http://localhost:5000/api/recommend", formData);
+      // const response = await axios.post("https://shoesbackend-3.onrender.com/api/recommend", formData);
+      // const response = await axios.post(`${API_BASE_URL}/api/recommend`, formData);
