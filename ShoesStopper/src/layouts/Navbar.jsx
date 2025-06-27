@@ -293,7 +293,10 @@ function Navbar() {
           <div className="flex items-center space-x-4 lg:space-x-6">
             {/* AI Button always visible */}
             <AIButton closeMobileMenu={closeMobileMenu} />
-
+            {/* Desktop-only Login Icon */}
+            <div className="hidden md:block">
+              <IconButton icon={<User size={20} />} onClick={handleLoginClick} />
+            </div>
             
 
             
