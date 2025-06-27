@@ -301,10 +301,10 @@ function Navbar() {
             <div className="md:hidden flex items-center">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-300 focus:outline-none transition-colors"
+                className="inline-flex items-center justify-center p-1 rounded-md text-white hover:text-gray-300 focus:outline-none transition-colors"
                 aria-label="Toggle menu"
               >
-                {isOpen ? <X size={10} /> : <Menu size={24} />}
+                {isOpen ? <X size={20} /> : <Menu size={20} />}
               </button>
             </div>
           </div>
